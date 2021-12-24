@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Roll Dice</title>
+        
+        
+        <meta http-equiv="refresh" content="180">
+        
+        <link rel="cononical" href="https://rolldice.xyz/dice">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/dicepage.css">
+        <script>
+       
+response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
+response.setHeader("Expires", "0"); // Proxies.
+        </script>
+       
+       <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        
+        
+        
+        
+        
+    </head>
+
+    
+    <body>
+    
+    <div id="home">
+            <svg  width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/></svg><a href="https://www.rolldice.xyz"> RETURN HOME</a>
+        </div>
+        
+            
+    
+        
+        
+        
+              
+        
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+  
+    </div>
+    <div class="col-sm" id="dice">
+       
+            
+           
+        
+             <img src="img/d3.png" alt="roll: 1" id="dice1">
+             <button class="btn btn-danger btn-lg" onclick="throwdice()" id="click">
+                 
+                 <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-dice-3-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+  <path fill-rule="evenodd" d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3zm2.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+</svg>
+                 
+                 Roll Dice</button>
+             <h1 id="a"></h1> 
+        
+    </div>
+      
+    <div class="col-sm" id="moneyback">
+        
+         <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+             
+             <div class="card-header">
+                   <h3>Money Back %</h3>
+                </div>
+             <div class="card-body">
+                
+                    <h2 id="status"  style="clear: left">0</h2>
+                 
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#cashoutmodal">
+                  Cashout
+                </button>
+
+       
+          </div>
+        </div>
+        
+        
+    
+ </div>
+
+  </div>
+</div>
+        
+        
+        
+         <div class="modal fade" id="cashoutmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                 
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                                 </button>
+                              </div>
+                              
+                              <div class="modal-body">
+                              <p>You will recieve your money back within 24 hours of rolling</p>
+          
+                               <form id="cash-form" >
+                                <div class="form-group">
+                                  <label for="finalscore">Money back % </label>
+                                  <input type="text" name="money"  class="form-control" id="examplemoney" aria-describedby="nomeyHelp" readonly>
+                                </div>
+               
+                               <div class="form-group">
+                                 <label for="exampleInputEmail1">Player name<br> <span style="color:#696969"><i>Player name should match the name used earlier to purchase roller level</i></span></label>
+                                 <input type="text" name="name"  class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp"  required>
+                                   
+                               </div>
+            
+                               <div class="form-group">    
+                                 <label for="exampleFormControlInput1">Email address<br> <span style="color:#696969"><i>Email should match the email used earlier to purchase roller level</i></span></label>
+                                 <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                               </div>
+                                   
+                                   
+                                <div class="form-group">
+    <label for="exampleInputEmail1">Bank name</label>
+     <select class="form-control" name="Bank_name"  id="bank_name">
+      <option value="Bank_name" disabled selected hidden >Choose bank</option>
+      <option>Access Bank Plc</option>
+      <option>Citibank Nigeria Limited</option>
+      <option>Ecobank Nigeria Plc</option>
+      <option>Fidelity Bank Plc</option>
+      <option>First City Monument Bank Limited</option>
+      <option>First Bank of Nigeria Limited</option>
+      <option>Guaranty Trust Bank Plc</option>
+      <option>Heritage Banking Company Limited</option>
+      <option>Keystone Bank Limited</option>
+      <option>Polaris Bank Limited</option>
+      <option>Stanbic IBTC Bank Plc</option>
+      <option>Standard Chartered</option>
+      <option>Sterling Bank Plc</option>
+      <option>Union Bank of Nigeria Plc</option>
+      <option>United Bank for Africa Plc</option>
+      <option>Unity Bank Plc</option>
+      <option>Wema Bank Plc</option>
+      <option>Zenith Bank Plc</option>
+        
+        
+    </select>
+
+  </div>
+                                   
+                                   
+                                   <div class="form-group">
+    <label for="exampleInputEmail1">Account number</label>
+    <input type='number' name="account_number" class="form-control" id="account_number" aria-describedby="emailHelp"  required>
+
+  </div>
+            
+
+ 
+                               <button  type="submit" class="btn btn-secondary" id="pay">Cashout</button> 
+                                   
+                                   
+                                   
+                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+            
+                            </form>
+          
+                          </div>
+        
+                     </div>
+                 </div>
+           </div>
+     
+        
+        
+     
+        
+            
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+<script src="scripts/scores.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        
+        
+
+        <script type="text/javascript">
+            
+            
+            var counter=0;
+        
+            function throwdice () {
+                //GENERATE RANDOM
+                var rand1 = Math.round(Math.random()*5) + 1;
+                
+                //SET IMAGE 
+                document.getElementById("dice1").src = "img/d" + rand1 + ".png";
+                
+                //SET ALT
+                
+                var side_alt= ["roll: 1", "roll: 2", "roll: 3", "roll: 4", "roll: 5", "roll: 6"];
+                document.getElementById("dice1").alt=side_alt[rand1-1]
+
+               //MONEY BACK
+                
+                var status=document.getElementById("status");
+            
+                
+                status.innerHTML = parseInt(status.innerHTML) + rand1 * 10;
+                
+                // SUBMIT SCORE TO MODAL FORM//
+                
+                 document.getElementById("examplemoney").value = status.innerHTML ;
+            
+                
+                
+                //BUTTON CLICK LIMIT
+                    
+              if(counter<1){
+    document.getElementById('a').innerHTML ;
+    counter++;
+}
+else{
+    document.getElementById("click").disabled=true;
+}
+              
+                  
+            }
+             
+
+    
+            
+     
+            //-------------------------------------------limit throws to 3------------------------------------//
+        //-------------------------------------------------------------------------------------------------//
+            
+           
+        // reload page  //
+         
+    function checkEvt(){
+    var evTypep=window.performance.getEntriesByType("navigation")[0].type;
+       if (evTypep=='reload'){
+         window.location.replace("https://rolldice.xyz");
+       }
+      
+}
+checkEvt();
+
+          
+           
+        </script>
+        
+        
+      
+        
+        
+        
+
+        
+
+    </body>
+</html>

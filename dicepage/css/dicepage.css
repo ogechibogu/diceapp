@@ -1,0 +1,55 @@
+body {
+    
+    background: #36E128;
+    
+}
+
+
+#dice {
+	
+    text-align: center;
+    margin-top: 150px;
+    
+}
+
+
+
+#moneyback {	
+    position: inherit;
+    text-align: center;
+    margin-top: 150px;
+    
+}
+
+.bi-dice-3-fill {
+   vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+#cashoutmodal{
+    text-align: center;
+}
+
+#home{
+    text-decoration: none none;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-decoration-line: none;
+    
+}
+
+#home svg {
+    margin-bottom: 6px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}

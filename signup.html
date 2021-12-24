@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name">First name</label>
+                                <input type="text" class="form-input" name="first_name" id="first_name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last name</label>
+                                <input type="text" class="form-input" name="last_name" id="last_name" />
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone_number">Email or Phone number</label>
+                            <input type="number text" class="form-input" name="phone_number" id="phone_number" />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Account_name">Account name</label>
+                                <input type="text" class="form-input" name="account_name" id="account_name" />
+                            </div>
+                            
+                            <div class="form-group">
+    <label for="Bank_name">Bank name</label>
+    <select class="form-control" id="bank_name">
+      <option>Access Bank Plc</option>
+      <option>Citibank Nigeria Limited</option>
+      <option>Ecobank Nigeria Plc</option>
+      <option>Fidelity Bank Plc</option>
+      <option>First City Monument Bank Limited</option>
+      <option>First Bank of Nigeria Limited</option>
+      <option>Guaranty Trust Bank Plc</option>
+      <option>Heritage Banking Company Limited</option>
+      <option>Keystone Bank Limited</option>
+      <option>Polaris Bank Limited</option>
+      <option>Stanbic IBTC Bank Plc</option>
+      <option>Standard Chartered</option>
+      <option>Sterling Bank Plc</option>
+      <option>Union Bank of Nigeria Plc</option>
+      <option>United Bank for Africa Plc</option>
+      <option>Unity Bank Plc</option>
+      <option>Wema Bank Plc</option>
+      <option>Zenith Bank Plc</option>
+        
+        
+    </select>
+  </div>
+                            
+                        </div>
+                         <div class="form-group">
+                            <label for="phone_number">Account Number</label>
+                            <input type="number" class="form-input" name="account_number" id="account_number" />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-input" name="password" id="password"/>
+                            </div>
+                           
+                        </div>
+                      
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDkqQ0c3kTYn5YFz-Fe5an4GB5tAkBrfig",
+    authDomain: "dice-edb21.firebaseapp.com",
+    databaseURL: "https://dice-edb21.firebaseio.com",
+    projectId: "dice-edb21",
+    storageBucket: "dice-edb21.appspot.com",
+    messagingSenderId: "848686154567",
+    appId: "1:848686154567:web:9dea13f8e64ff628fc0262",
+    measurementId: "G-XJ9NE5WJ1G"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+    
+    //Make auth and firestore refrences 
+    
+    const auth=firebase.auth();
+    const db= firebase.firestore();
+    
+    
+    //update firestore settings 
+    
+    db.settings({timestampsinsnapshots: true});
+</script>
+   
+    
+
+  
+    <!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,41 @@
+body{
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+.bi-dice-3-fill {
+   vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+
+#rollaz {
+    margin-top: auto;
+    margin-bottom: 150px;
+}
+
+
+#bodybag{
+  
+    background: linear-gradient(135deg, orange 60%, cyan);
+    
+}
+
+
+.img{
+    text-align: center;
+    margin-top: 20px;
+          
+}
+
+#news{
+    text-align: center;
+    margin-top: 40px;
+}

@@ -1,0 +1,36 @@
+body {
+    background-image: url('mygreen.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#dice {
+	
+    text-align: center;
+    margin-top: 150px;
+    
+}
+
+
+
+#moneyback {	
+    position: inherit;
+    text-align: center;
+    margin-top: 150px;
+    
+}
+
+.bi-dice-3-fill {
+   vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+#cashoutmodal{
+    text-align: center;
+}
+
